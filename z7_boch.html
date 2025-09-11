@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 7 - Alert Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+        .demo-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+        }
+        .alert-button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .alert-button:hover {
+            background-color: #0056b3;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .theory-section {
+            background-color: #e9f7ef;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+        ul {
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+    <script type="text/javascript">
+        function show_alert() {
+            alert("Uwaga!");
+        }
+
+
+
+    function show_custom_alert() {
+        alert("To jest przykład Alert Box w JavaScript!");
+    }
+
+    function show_info_alert() {
+        alert("Alert Box jest używany do przekazywania ważnych informacji użytkownikowi.");
+    }
+</script>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Zadanie 7 - Alert Box</h1>
+
+
+
+    <div class="demo-section">
+        <h2>Demonstracja Alert Box</h2>
+        <p>Kliknij poniższy przycisk, aby uruchomić Alert Box:</p>
+        <input type="button" onclick="show_alert()" value="Pokaż Alert Box" class="alert-button" />
+
+        <p style="margin-top: 20px;">Dodatkowe przykłady:</p>
+        <input type="button" onclick="show_custom_alert()" value="Alert Niestandardowy" class="alert-button" style="margin-right: 10px;" />
+        <input type="button" onclick="show_info_alert()" value="Alert Informacyjny" class="alert-button" />
+    </div>
+
+    <div class="theory-section">
+        <h2>Teoria - Alert Box w JavaScript</h2>
+
+        <h3>Czym jest Alert Box?</h3>
+        <p>Alert Box to jedno z trzech typów okien dialogowych dostępnych w JavaScript (obok Confirm Box i Prompt Box). Jest to proste okno popup, które wyświetla komunikat użytkownikowi i wymaga od niego potwierdzenia przez kliknięcie przycisku "OK".</p>
+
+        <h3>Zastosowanie Alert Box</h3>
+        <p>Alert Box jest używany do:</p>
+        <ul>
+            <li><strong>Przekazywania ważnych informacji</strong> - powiadomienia o błędach, ostrzeżenia, komunikaty o sukcesie</li>
+            <li><strong>Debugowania kodu</strong> - wyświetlanie wartości zmiennych podczas testowania</li>
+            <li><strong>Zatrzymywania wykonywania skryptu</strong> - kod zostaje wstrzymany do momentu zamknięcia alertu</li>
+            <li><strong>Prostych powiadomień</strong> - gdy nie potrzebujemy złożonego interfejsu</li>
+        </ul>
+
+        <h3>Składnia</h3>
+        <div class="code-block">
+
+
+alert("Treść komunikatu");  
+
+
+
+        <h3>Charakterystyka Alert Box</h3>
+        <ul>
+            <li><strong>Modalność</strong> - okno blokuje interakcję z resztą strony</li>
+            <li><strong>Synchroniczność</strong> - wykonywanie kodu zostaje wstrzymane</li>
+            <li><strong>Jeden przycisk</strong> - tylko przycisk "OK" do zamknięcia</li>
+            <li><strong>Brak stylowania</strong> - wygląd zależy od przeglądarki</li>
+            <li><strong>Prostota</strong> - łatwe w implementacji i użyciu</li>
+        </ul>
+
+        <h3>Przykłady użycia</h3>
+
+        <h4>1. Podstawowy alert</h4>
+        <div class="code-block">
+
+alert("Witaj na naszej stronie!");  
+
+
+
+        <h4>2. Alert z zmienną</h4>
+        <div class="code-block">
+
+
+var nazwa = "Jan";  
+alert("Witaj " + nazwa + "!");  
+
+
+
+        <h4>3. Alert w funkcji</h4>
+        <div class="code-block">
+
+
+function pokazAlert() {  
+alert("To jest alert wywołany z funkcji!");  
+}  
+
+
+
+        <h4>4. Alert z obsługą zdarzenia</h4>
+        <div class="code-block">
+
+
+<button onclick="alert('Przycisk został kliknięty!')">Kliknij mnie</button>  
+
+
+
+        <h3>Zalety Alert Box</h3>
+        <ul>
+            <li>Prostota implementacji</li>
+            <li>Natychmiastowa widoczność</li>
+            <li>Uniwersalność - działa we wszystkich przeglądarkach</li>
+            <li>Nie wymaga dodatkowych bibliotek</li>
+            <li>Idealny do szybkiego debugowania</li>
+        </ul>
+
+        <h3>Wady Alert Box</h3>
+        <ul>
+            <li>Brak możliwości stylowania</li>
+            <li>Może być irytujący dla użytkowników</li>
+            <li>Blokuje wykonywanie kodu</li>
+            <li>Ograniczone opcje interakcji</li>
+            <li>Może być blokowany przez przeglądarki</li>
+        </ul>
+
+        <h3>Alternatywy dla Alert Box</h3>
+        <p>W nowoczesnym web developmencie często używa się alternatyw:</p>
+        <ul>
+            <li><strong>Niestandardowe modalne okna</strong> - większa kontrola nad wyglądem</li>
+            <li><strong>Toast notifications</strong> - mniej inwazyjne powiadomienia</li>
+            <li><strong>Console.log()</strong> - do debugowania</li>
+            <li><strong>Biblioteki UI</strong> - Bootstrap Modal, SweetAlert, itp.</li>
+        </ul>
+
+        <h3>Dobre praktyki</h3>
+        <ul>
+            <li>Używaj alertów oszczędnie - tylko do ważnych komunikatów</li>
+            <li>Pisz krótkie, jasne komunikaty</li>
+            <li>Unikaj alertów w pętlach</li>
+            <li>Rozważ alternatywy dla lepszego UX</li>
+            <li>Testuj na różnych przeglądarkach</li>
+        </ul>
+    </div>
+
+    <div class="demo-section">
+        <h2>Kod źródłowy zadania</h2>
+        <div class="code-block">
+
+<!DOCTYPE html>  
+<html lang="pl">  
+<head>  
+<script type="text/javascript">  
+function show_alert() {  
+alert("Uwaga!");  
+}  
+</script>  
+</head>  
+<body>  
+<input type="button" onclick="show_alert()" value="Pokaż Alert Box" />  
+</body>  
+</html>
+
+
+
+
+    <div class="theory-section">
+        <h2>Instrukcja wykonania zadania</h2>
+        <ol>
+            <li><strong>Utworzenie przycisku</strong> - Dodaj przycisk na stronie zaliczeniowej z odpowiednią nazwą</li>
+            <li><strong>Kopiowanie kodu</strong> - Skopiuj powyższy kod do pliku zadanie7_kow.html</li>
+            <li><strong>Dodanie teorii</strong> - Dopisz teoretyczne informacje o Alert Box</li>
+            <li><strong>Podłączenie pliku</strong> - Połącz plik HTML z przyciskiem na stronie głównej</li>
+            <li><strong>Testowanie</strong> - Sprawdź czy alert działa poprawnie</li>
+        </ol>
+    </div>
+
+    <p style="text-align: center; margin-top: 30px; color: #666;">
+        <em>Zadanie 7 - Alert Box - Wykonane zgodnie z wymaganiami</em>
+    </p>
+</div>
+
+
+
+</body>
+</html>
